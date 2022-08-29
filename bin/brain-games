@@ -1,0 +1,4 @@
+#!/usr/bin/env php
+
+php bin/brain-games
+Welcome to the Brain Games!
