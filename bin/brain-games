@@ -1,5 +1,5 @@
 #!/usr/bin/env php
-./bin/brain-games
+
 <?php
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';

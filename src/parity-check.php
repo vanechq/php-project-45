@@ -5,7 +5,7 @@ namespace BrainGames\Parity\Check;
 use function cli\line;
 use function cli\prompt;
 
-function parityCheck()
+function parityCheck(): void
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
@@ -23,8 +23,10 @@ function parityCheck()
         } elseif ($answer === 'no' && $check === false) {
             line('Correct!');
         } elseif ($answer === 'no' && $check === true) {
-            line("'yes' is wrong answer ;(. Correct answer was 'no'. \n Let's try again, $name");
+            line("'no' is wrong answer ;(. Correct answer was 'yes'. \n Let's try again, $name");
             return;
+        } elseif ($answer !== 'yes' && $answer !== 'no') {
+            line("'$answer' is wrong answer ;(. Correct answer was 'yes or no'. \n Let's try again, $name");
         }
     }
     line("Congratulations, $name!");

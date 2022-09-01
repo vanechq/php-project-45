@@ -2,12 +2,14 @@
     "name": "hexlet/code",
     "bin": [
 	"bin/brain-games",
-      "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "autoload": {
 	"files": [
-		"src/Cli.php",
-      "src/parity-check.php"
+		"src/parity-check.php",
+        "src/Cli.php",
+        "src/Calculate.php"
 	],
 	"psr-0": {
             "cli": "src/"
@@ -25,5 +27,8 @@
     "require": {
         "wp-cli/php-cli-tools": "^0.11.15",
         "squizlabs/php_codesniffer": "3.*"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.8"
     }
 }
