@@ -23,12 +23,12 @@ function play(): void
     line('Answer "yes" if the number is even, otherwise answer "no".');
     for ($i = 1; $i <= 3; $i++) {
         $num = rand(0, 100);
-        line("Question: {$num}");
+        line("Question: $num");
         $result = getAnswer($num);
         $answer = prompt('Your answer');
-        if ($answer === "{$result}") {
+        if ($answer === "$result") {
             line('Correct!');
-        } elseif ($answer !== "{$result}") {
+        } elseif ($answer !== "$result") {
             line("'$answer' is wrong answer ;(. Correct answer was '$result'. \nLet's try again, $name!");
             return;
         }

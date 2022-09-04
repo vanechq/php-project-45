@@ -29,7 +29,7 @@ function play(): void
         $result = $progression[$hiddenIndex];
         $progression[$hiddenIndex] = '..';
         $question = implode(' ', $progression);
-        line("Question: {$question}");
+        line("Question: $question");
         $answer = prompt('Your answer');
         if ($answer === "$result") {
             line('Correct!');

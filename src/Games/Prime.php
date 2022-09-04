@@ -30,9 +30,9 @@ function play(): void
         line("Question: {$num}");
         $result = getAnswer($num);
         $answer = prompt('Your answer');
-        if ($answer === "{$result}") {
+        if ($answer === "$result") {
             line('Correct!');
-        } elseif ($answer !== "{$result}") {
+        } elseif ($answer !== "$result") {
             line("'$answer' is wrong answer ;(. Correct answer was '$result'. \nLet's try again, $name!");
             return;
         }

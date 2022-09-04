@@ -24,7 +24,7 @@ function play(): void
         $a = rand(0, 100);
         $b = rand(0, 100);
         $result = gcd($a, $b);
-        line("Question: {$a} {$b}");
+        line("Question: $a $b");
         $answer = prompt('Your answer');
         if ($answer === "$result") {
             line('Correct!');
