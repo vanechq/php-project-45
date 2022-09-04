@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Games\Parity;
+namespace BrainGames\Games\Even;
 
 use function cli\line;
 use function cli\prompt;
@@ -29,7 +29,7 @@ function play(): void
         if ($answer === "{$result}") {
             line('Correct!');
         } elseif ($answer !== "{$result}") {
-            line("'$answer' is wrong answer ;(. Correct answer was \"{$result}\". \nLet's try again, $name");
+            line("'$answer' is wrong answer ;(. Correct answer was '$result'. \nLet's try again, $name");
             return;
         }
     }

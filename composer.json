@@ -10,7 +10,7 @@
     ],
     "autoload": {
 	"files": [
-        "src/Games/Parity.php",
+        "src/Games/Even.php",
         "src/Cli.php",
         "src/Games/Calculator.php",
         "src/Games/Gcd.php",
