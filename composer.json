@@ -1,15 +1,21 @@
 {
     "name": "hexlet/code",
     "bin": [
-	"bin/brain-games",
+	    "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd",
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
     "autoload": {
 	"files": [
-		"src/parity-check.php",
+        "src/Games/Parity.php",
         "src/Cli.php",
-        "src/Calculate.php"
+        "src/Games/Calculator.php",
+        "src/Games/Gcd.php",
+        "src/Games/Progression.php",
+        "src/Games/Prime.php"
 	],
 	"psr-0": {
             "cli": "src/"

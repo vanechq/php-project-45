@@ -1,11 +1,11 @@
 <?php
 
-namespace BrainGames\Calculate;
+namespace BrainGames\Games\Calculator;
 
 use function cli\line;
 use function cli\prompt;
 
-function calculate(): void
+function play(): void
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
@@ -14,8 +14,8 @@ function calculate(): void
     for ($i = 1; $i <= 3; $i++) {
         $operators = ['+','-','*'];
         $index = array_rand($operators, 1);
-        $a = rand(0, 10);
-        $b = rand(0, 10);
+        $a = rand(0, 25);
+        $b = rand(0, 25);
         $operation = $operators[$index];
         $result = 0;
         switch ($operation) {
@@ -29,11 +29,12 @@ function calculate(): void
                 $result = $a - $b;
                 break;
         }
-        $answer = prompt("Question: $a $operation $b");
+        line("Question: $a $operation $b");
+        $answer = prompt('Your answer');
         if ($answer === "$result") {
             line('Correct!');
         } elseif ($answer !== "$result") {
-            line("'$answer' is wrong answer ;(. Correct answer was '$result'. \n Let's try again, $name");
+            line("'$answer' is wrong answer ;(. Correct answer was '$result'. \nLet's try again, $name");
             return;
         }
     }
