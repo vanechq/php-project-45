@@ -34,7 +34,7 @@ function play(): void
         if ($answer === "$result") {
             line('Correct!');
         } elseif ($answer !== "$result") {
-            line("'$answer' is wrong answer ;(. Correct answer was '$result'. \nLet's try again, $name");
+            line("'$answer' is wrong answer ;(. Correct answer was '$result'. \nLet's try again, $name!");
             return;
         }
     }
