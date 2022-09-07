@@ -15,7 +15,8 @@
         "src/Games/Calculator.php",
         "src/Games/Gcd.php",
         "src/Games/Progression.php",
-        "src/Games/Prime.php"
+        "src/Games/Prime.php",
+        "src/Engine.php"
 	],
 	"psr-0": {
             "cli": "src/"

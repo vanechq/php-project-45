@@ -2,41 +2,32 @@
 
 namespace BrainGames\Games\Calculator;
 
+use function BrainGames\Engine\runGame;
 use function cli\line;
 use function cli\prompt;
 
+function calculate(int $num1, int $num2, string $operation): int
+{
+    return match ($operation) {
+        '*' => $result = $num1 * $num2,
+        '+' => $result = $num1 + $num2,
+        '-' => $result = $num1 - $num2,
+        default => throw new \Exception('Unexpected value'),
+    };
+}
+
 function play(): void
 {
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?');
-    line('Hello, %s!', $name);
-    line('What is the result of the expression?');
-    for ($i = 1; $i <= 3; $i++) {
-        $operators = ['+','-','*'];
+    $link = 'What is the result of the expression?';
+    $gameData = function () {
+        $operators = ['+', '-', '*'];
         $index = array_rand($operators, 1);
-        $a = rand(0, 25);
-        $b = rand(0, 25);
+        $num1 = rand(0, 25);
+        $num2 = rand(0, 25);
         $operation = $operators[$index];
-        $result = 0;
-        switch ($operation) {
-            case '*':
-                $result = $a * $b;
-                break;
-            case '+':
-                $result = $a + $b;
-                break;
-            case '-':
-                $result = $a - $b;
-                break;
-        }
-        line("Question: $a $operation $b");
-        $answer = prompt('Your answer');
-        if ($answer === "$result") {
-            line('Correct!');
-        } elseif ($answer !== "$result") {
-            line("'$answer' is wrong answer ;(. Correct answer was '$result'. \nLet's try again, $name!");
-            return;
-        }
-    }
-    line("Congratulations, $name!");
+        $question = "{$num1} {$operation} {$num2}";
+        $answer = calculate($num1, $num2, $operation);
+        return [$question, $answer];
+    };
+    runGame($link, $gameData);
 }

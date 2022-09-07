@@ -2,6 +2,7 @@
 
 namespace Braingames\Games\Progression;
 
+use function BrainGames\Engine\runGame;
 use function cli\line;
 use function cli\prompt;
 
@@ -16,27 +17,17 @@ function generateProgression(int $start, int $step, int $length): mixed
 
 function play(): void
 {
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?');
-    line('Hello, %s!', $name);
-    line("What number is missing in the progression?");
-    for ($i = 1; $i <= 3; $i++) {
+    $link = "What number is missing in the progression?";
+    $gameData = function () {
         $start = rand(0, 20);
         $step = rand(0, 20);
         $length = rand(5, 15);
         $progression = generateProgression($start, $step, $length);
         $hiddenIndex = array_rand($progression, 1);
-        $result = $progression[$hiddenIndex];
+        $answer = $progression[$hiddenIndex];
         $progression[$hiddenIndex] = '..';
         $question = implode(' ', $progression);
-        line("Question: $question");
-        $answer = prompt('Your answer');
-        if ($answer === "$result") {
-            line('Correct!');
-        } elseif ($answer !== "$result") {
-            line("'$answer' is wrong answer ;(. Correct answer was '$result'. \nLet's try again, $name!");
-            return;
-        }
-    }
-    line("Congratulations, $name!");
+        return [$question, $answer];
+    };
+    runGame($link, $gameData);
 }
