@@ -22,12 +22,12 @@ function getAnswer(int $question): string
 
 function play(): void
 {
-    $link = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $gameData = function () {
         $num = rand(2, 20);
         $question = $num;
         $answer = getAnswer($num);
         return [$question, $answer];
     };
-    runGame($link, $gameData);
+    runGame($description, $gameData);
 }

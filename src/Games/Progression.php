@@ -17,17 +17,17 @@ function generateProgression(int $start, int $step, int $length): mixed
 
 function play(): void
 {
-    $link = "What number is missing in the progression?";
+    $description = "What number is missing in the progression?";
     $gameData = function () {
         $start = rand(0, 20);
         $step = rand(0, 20);
         $length = rand(5, 15);
         $progression = generateProgression($start, $step, $length);
         $hiddenIndex = array_rand($progression, 1);
-        $answer = $progression[$hiddenIndex];
+        $answer = (string)$progression[$hiddenIndex];
         $progression[$hiddenIndex] = '..';
         $question = implode(' ', $progression);
         return [$question, $answer];
     };
-    runGame($link, $gameData);
+    runGame($description, $gameData);
 }

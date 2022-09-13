@@ -18,7 +18,7 @@ function calculate(int $num1, int $num2, string $operation): int
 
 function play(): void
 {
-    $link = 'What is the result of the expression?';
+    $description = 'What is the result of the expression?';
     $gameData = function () {
         $operators = ['+', '-', '*'];
         $index = array_rand($operators, 1);
@@ -26,8 +26,8 @@ function play(): void
         $num2 = rand(0, 25);
         $operation = $operators[$index];
         $question = "{$num1} {$operation} {$num2}";
-        $answer = calculate($num1, $num2, $operation);
+        $answer = (string)(calculate($num1, $num2, $operation));
         return [$question, $answer];
     };
-    runGame($link, $gameData);
+    runGame($description, $gameData);
 }

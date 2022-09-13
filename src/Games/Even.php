@@ -18,12 +18,12 @@ function getAnswer(int $question): string
 
 function play(): void
 {
-    $link = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $description = 'Answer "yes" if the number is even, otherwise answer "no".';
     $gameData = function () {
         $num = rand(0, 100);
         $question = "$num";
         $answer = getAnswer($num);
         return [$question, $answer];
     };
-    runGame($link, $gameData);
+    runGame($description, $gameData);
 }

@@ -17,13 +17,7 @@
         "src/Games/Progression.php",
         "src/Games/Prime.php",
         "src/Engine.php"
-	],
-	"psr-0": {
-            "cli": "src/"
-        },
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        }
+	]
     },
     "authors": [
         {
