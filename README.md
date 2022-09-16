@@ -13,22 +13,20 @@ $ make install
 ## Пример выполнения игры
 Запуск игры Brain-even:
 `$brain-even`
-[![asciicast](https://asciinema.org/a/UbkaeObMYPQyVADOzEf3abzdC.svg)](https://asciinema.org/a/UbkaeObMYPQyVADOzEf3abzdC)
+[![asciicast](https://asciinema.org/a/521865.svg)](https://asciinema.org/a/521865)
 
 Запуск игры Brain-calc:
 `$ brain-cacl`
-[![asciicast](https://asciinema.org/a/9nYbKWlxif2scDJRkWDxCK4It.svg)](https://asciinema.org/a/9nYbKWlxif2scDJRkWDxCK4It)
+[![asciicast](https://asciinema.org/a/521866.svg)](https://asciinema.org/a/521866)
 
 Запуск игры Brain-gcd:
 `$brain-gcd`
-[![asciicast](https://asciinema.org/a/9o0W2ekNAEKaVv5V2KtCw7q5A.svg)](https://asciinema.org/a/9o0W2ekNAEKaVv5V2KtCw7q5A)
-
+[![asciicast](https://asciinema.org/a/521867.svg)](https://asciinema.org/a/521867)
 
 Запуск игры Brain-progression:
 `$ brain-progression`
-[![asciicast](https://asciinema.org/a/lrxnVXI1je5gq7nhsYkRIcZU9.svg)](https://asciinema.org/a/lrxnVXI1je5gq7nhsYkRIcZU9)
+[![asciicast](https://asciinema.org/a/521869.svg)](https://asciinema.org/a/521869)
 
 Запуск игры Brain-prime:
 `$ brain-prime`
-[![asciicast](https://asciinema.org/a/2v1JM3x5KMWcpuzT5B9boT505.svg)](https://asciinema.org/a/2v1JM3x5KMWcpuzT5B9boT505)
-
+[![asciicast](https://asciinema.org/a/521870.svg)](https://asciinema.org/a/521870)
