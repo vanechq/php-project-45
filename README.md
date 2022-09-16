@@ -13,20 +13,25 @@ $ make install
 ## Пример выполнения игры
 Запуск игры Brain-even:
 `$brain-even`
+
 [![asciicast](https://asciinema.org/a/521865.svg)](https://asciinema.org/a/521865)
 
 Запуск игры Brain-calc:
 `$ brain-cacl`
+
 [![asciicast](https://asciinema.org/a/521866.svg)](https://asciinema.org/a/521866)
 
 Запуск игры Brain-gcd:
 `$brain-gcd`
+
 [![asciicast](https://asciinema.org/a/521867.svg)](https://asciinema.org/a/521867)
 
 Запуск игры Brain-progression:
 `$ brain-progression`
+
 [![asciicast](https://asciinema.org/a/521869.svg)](https://asciinema.org/a/521869)
 
 Запуск игры Brain-prime:
 `$ brain-prime`
+
 [![asciicast](https://asciinema.org/a/521870.svg)](https://asciinema.org/a/521870)
